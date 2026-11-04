@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>询价与联系 RFQ | 东莞市嘉泰精密制造有限公司</title>
+<meta name="description" content="上传3D/2D图纸在线询价，填写材料、公差、表面处理、年用量与文件包需求，东莞嘉泰精密，24小时报价。">
+<link rel="alternate" hreflang="en" href="en/index.html">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 旧站内容待核实；示例内容待替换 -->
+<div class="topbar"><div class="container"><span>📞 0755-27248586 ｜ 178 4132 8731 <span class="hide-m">｜ ✉ robin.zeng@tcsmodel.com</span></span><span class="hide-m">同创顺 TCS · CNC 手板与精密零件 · 可签保密协议</span></div></div>
+<header class="site"><div class="container nav">
+<a class="logo" href="index.html"><svg width="38" height="38" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#0b2545"/><path d="M20 6l3 6h-6zM20 34l-3-6h6zM6 20l6-3v6zM34 20l-6 3v-6z" fill="#f26b1d"/><circle cx="20" cy="20" r="6" fill="none" stroke="#fff" stroke-width="3"/></svg><span>嘉泰精密 <small style="font-weight:400;color:#5c6b7a;font-size:12px">原深圳同创顺</small></span></a>
+<button class="burger" aria-label="菜单" aria-expanded="false">☰</button>
+<ul class="menu"><li><a href="index.html">首页</a></li><li><a href="capabilities.html">加工能力</a></li><li><a href="equipment.html">设备清单</a></li><li><a href="quality.html">质量与认证</a></li><li><a href="cases.html">案例</a></li><li><a href="industries.html">服务行业</a></li><li><a href="about.html">关于我们</a></li><li><a href="faq.html">常见问题</a></li><li><a href="contact.html" class=active>询价/联系</a></li><li><span class="lang"><b>中文</b> / <a href="en/index.html">EN</a></span></li></ul>
+</div></header>
+<main>
+<section class="page-hero"><div class="container"><h1>询价 / RFQ</h1><p>上传图纸，填写材料、公差、数量与交期需求</p></div></section>
+<section><div class="container grid g2 g-contact">
+<form id="quoteForm" class="card" novalidate>
+<h3>在线询价</h3>
+<p style="font-size:13px;color:var(--steel);margin-bottom:4px">提交仅做前端校验，尚未接入后端。</p>
+<div class="row"><div><label for="name">姓名 <span class="req">*</span></label><input id="name"><div class="err"></div></div>
+<div><label for="company">公司</label><input id="company"><div class="err"></div></div></div>
+<div class="row"><div><label for="phone">电话 / 微信 <span class="req">*</span></label><input id="phone" placeholder="手机号或微信号"><div class="err"></div></div>
+<div><label for="email">邮箱</label><input id="email" type="email"><div class="err"></div></div></div>
+<div class="row"><div><label for="material">材料牌号 <span class="req">*</span></label><select id="material"><option value="">请选择</option><option>铝合金 6061/7075/6063</option><option>不锈钢 304/316/17-4</option><option>碳钢/合金钢</option><option>铜/黄铜</option><option>钛合金 TC4</option><option>POM</option><option>PEEK</option><option>ABS</option><option>PC</option><option>亚克力 PMMA</option><option>尼龙</option><option>3D 打印树脂</option><option>复模材料</option><option>其他/不确定</option></select><div class="err"></div></div>
+<div><label for="finish">表面处理</label><select id="finish"><option value="">机加原色 / 待定</option><option>阳极氧化</option><option>喷砂</option><option>电镀/化学镍</option><option>钝化</option><option>喷油/UV/丝印</option><option>粉末喷涂</option><option>其他（备注说明）</option></select><div class="err"></div></div></div>
+<div class="row"><div><label for="tol">关键公差要求</label><select id="tol"><option value="">按图纸</option><option>±0.05 mm</option><option>±0.02 mm（旧站 CNC 精度）</option><option>更严，需工程评审</option><option>图纸已标注，严格按图</option></select><div class="err"></div></div>
+<div><label for="qty">本次数量（件） <span class="req">*</span></label><input id="qty" type="number" min="1"><div class="err"></div></div></div>
+<div class="row"><div><label for="annual">预计年用量（可选）</label><input id="annual" placeholder="如 500 / 年，便于评估批量价"><div class="err"></div></div>
+<div><label for="date">目标交期</label><input id="date" type="date"><div class="err"></div></div></div>
+<div class="row"><div><label for="stage">项目阶段</label><select id="stage"><option>手板 / 原型</option><option>工程验证</option><option>小批量</option><option>重复生产订单</option></select><div class="err"></div></div>
+<div><label for="dfm">是否需要 DFM 反馈</label><select id="dfm"><option>需要，请提出可制造性建议</option><option>暂不需要，严格按图加工</option></select><div class="err"></div></div></div>
+<div class="row"><div><label for="file3d">3D 模型（STEP/IGS）</label><input id="file3d" type="file" accept=".step,.stp,.igs,.iges"><div class="err"></div></div>
+<div><label for="file2d">2D 图纸（PDF/DWG/DXF）</label><input id="file2d" type="file" accept=".pdf,.dwg,.dxf"><div class="err"></div></div></div>
+<label>需要的出货文件（可多选）</label>
+<div class="chk"><label><input type="checkbox" name="doc" value="FAI 首件报告"> FAI 首件报告</label><label><input type="checkbox" name="doc" value="尺寸报告"> 尺寸报告</label><label><input type="checkbox" name="doc" value="材质证明"> 材质证明</label><label><input type="checkbox" name="doc" value="合格证 CoC"> 合格证 CoC</label><label><input type="checkbox" name="doc" value="表面处理报告"> 表面处理报告</label><label><input type="checkbox" name="doc" value="不需要额外报告"> 不需要额外报告</label></div>
+<label for="msg">备注（密封面、螺纹、装配要求等）</label><textarea id="msg" rows="3"></textarea>
+<label class="chk" style="margin:10px 0"><input type="checkbox" id="nda"> 希望先签署 NDA 再发送详细图纸</label>
+<p style="font-size:12px;color:var(--steel);margin:8px 0">3D 与 2D 建议同时提供；大文件可先提交询价再微信传图。</p>
+<button class="btn" type="submit">提交询价</button>
+<div id="notice" class="notice"></div>
+</form>
+<div><div class="card"><h3>东莞市嘉泰精密制造有限公司 <span class="src-tag">来自旧站，待核实</span></h3><p>📍 广东省东莞市长安镇厦边景源路2号1号楼201室<br>📱 手机：13751127229</p>
+<h3 style="margin-top:14px;font-size:16px">原深圳市同创顺成型技术有限公司</h3><p>📞 座机：0755-27248586<br>📱 手机：17841328731（梁小姐）<br>✉ 邮箱：robin.zeng@tcsmodel.com<br>📍 深圳市宝安区沙井街道新桥社区新发东路21号<br>🕘 营业时间：待补充 <span class="demo-tag">示例，待替换</span></p></div>
+<div style="margin-top:20px"><div class="ph" style="min-height:220px"><small>替换为实拍图</small><span>地图占位：接入高德/百度地图（东莞长安厂址）</span></div></div>
+<div class="card" style="margin-top:20px"><h3>微信 / 社媒（二维码占位）</h3><div class="grid g3" style="text-align:center;font-size:13px;gap:10px">
+<div><div class="qr" style="width:80px;height:80px"></div>抖音</div><div><div class="qr" style="width:80px;height:80px"></div>视频号</div><div><div class="qr" style="width:80px;height:80px"></div>小红书</div></div>
+<p style="text-align:center;margin-top:8px"><span class="demo-tag">替换为真实二维码</span></p></div></div>
+</div></section>
+</main>
+<footer class="site"><div class="container">
+<div class="grid g4">
+<div><h4>东莞市嘉泰精密制造有限公司</h4><p>原深圳市同创顺成型技术有限公司（2010 年成立），专注 CNC 手板、精密五金零件及小批量生产。</p></div>
+<div><h4>快速链接</h4><p><a href="capabilities.html">加工能力</a><br><a href="quality.html">质量与认证</a><br><a href="cases.html">案例展示</a><br><a href="faq.html">常见问题 FAQ</a><br><a href="contact.html">询价 / RFQ</a></p></div>
+<div><h4>联系我们</h4><p>座机：0755-27248586<br>手机：17841328731（梁小姐）<br>手机：13751127229<br>邮箱：robin.zeng@tcsmodel.com<br>地址：广东省东莞市长安镇厦边景源路2号1号楼201室</p></div>
+<div><h4>关注我们</h4><p>抖音 / 视频号 / 小红书：账号待开通<span class="demo-tag">示例，待替换</span></p><p><a class="btn" style="margin-top:10px;padding:8px 18px;font-size:14px" href="contact.html">上传图纸询价</a></p></div>
+</div>
+<div class="copy">© 2026 东莞市嘉泰精密制造有限公司 ｜ 粤ICP备17086698号（旧站备案主体为深圳同创顺，需核实/重新备案）</div>
+</div></footer>
+<a class="float-quote" href="contact.html">💬 在线询价</a>
+<script src="js/main.js"></script>
+</body>
+</html>
